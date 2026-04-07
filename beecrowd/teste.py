@@ -1,17 +1,24 @@
+'''
+Problema: beecrowd | 1001
+Data: 2026.04.07
+Estudante: Felipe Gravina
+'''
+# Objetivo: Ler dois inteiros nas variaveis A e B, calcular a soma em X e exibir o resultado
 
-#  Experimento 1 - Saída de dados
-print("Olá, mundo!")
-print("Meu nome é Python 🐍")
+# --- ANÁLISE (LIAC) ---
+# Enttrada: dois números inteiros, cada um em uma linha separada
+# Processamento: somar A + B e armazenar em X
+# Saída:  exibir no formato exato "X = valor" (espaços ao redor do =, sem mensagens extras)
 
+#int()     coverte o texto lido para número inteiro
+#input()   lê o valor fornecido (digitando ou pelo Beecrowd)
+#input()   lê e converte em uma ùnica instrução
+A = int(input())
+B = int(input())
 
-# Experimento 2 - Entrada de dados
-nome = input("Qual é o seu nome? ")
-print("Olá, "+ nome + "!")
+# 0 enunciado especifica explicitamente as variáveis A, B e X - seguir à risca
+X = A + B
 
-
-# Experimento 3 - Operação simples 
-a = 10
-b = 5
-print(a + b)
-print(a - b)
-print(a * b)
+#f-string: insere o valor de X dentro do texto com {}
+# Atenção: espaço antes e depois do = ´é obrigatóóório conforme o enunciado 
+print(f"X = {X}")
