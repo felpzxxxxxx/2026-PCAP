@@ -1,5 +1,7 @@
+from jogadores import titulo, linha
+
 # ==========================================
-# Arquivo:    Telas.py
+# Arquivo:    telas.py
 # Disciplina: 2026-PCAP
 # Aula:       20
 # Autor:      Felipe Gravina Batista
