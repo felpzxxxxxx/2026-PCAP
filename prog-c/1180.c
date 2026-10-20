@@ -1,0 +1,37 @@
+/* 
+ * Disciplina : 2026-PCAP 
+ * Problema   : beecrowd 1175 - Array Replacement I (Ajustado para menor valor)
+ * Autor      : Felipe 
+ * Data       : 2026.10.09 
+ * LIAC       : Le N e depois N inteiros num vetor. Imprime o menor valor e a posicao em que ele esta (a partir de zero). 
+ */ 
+
+#include <stdio.h> 
+
+
+int posicao_do_menor(int v[], int n) { 
+    int i, pos = 0; 
+    for(i = 1; i < n; i++) { 
+        if (v[i] < v[pos]) { 
+            pos = i; 
+        } 
+    } 
+    return pos; 
+} 
+
+int main() { 
+    int v[1000], n, i, pos; 
+    
+    if (scanf("%d", &n) != 1) return 1; 
+    
+    for (i = 0; i < n; i++){ 
+        if (scanf("%d", &v[i]) != 1) return 1; 
+    } 
+    
+    pos = posicao_do_menor(v, n); 
+    
+    printf("Menor valor: %d\n", v[pos]); 
+    printf("Posicao: %d\n", pos); 
+    
+    return 0; 
+}
