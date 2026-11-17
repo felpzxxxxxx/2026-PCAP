@@ -4,6 +4,8 @@
 * Autor     : Felipe Gravina 
 * LIAC      : Menu com validacao, cadastro de jogadores em dois vectors que crescem, um jogo que conta partidas por jogador e o xadastro salvo em arquivo na saida e relido na entrada.
 */
+
+
 #include <iostream>
 #include <string>  
 #include <vector>
@@ -87,6 +89,11 @@ void cadastrar(vector<string> &apelidos, vector<int> &partidas) {
 
     titulo("NOVO JOGADOR");
     novo = ler_texto("Apelido (sem espaços)");
+    
+    if (buscar(apelidos, novo) != -1){
+        cout << "Apelido ja existe" << endl;
+        return;
+    }
 
     apelidos.push_back(novo);
     partidas.push_back(0);
